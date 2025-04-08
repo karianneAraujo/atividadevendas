@@ -90,6 +90,9 @@ void realizarVenda(Cliente *c, Produto *p, Venda *v, int *contVendas) {
         printf("\nDigite o ID do Cliente: ");
         scanf("%d", &idCliente);
         limparBuffer();
+        if (idCliente == 0){
+            return ;
+        }
         if (idCliente >= 1 && idCliente <= TAMCli) break;
         printf("Cliente inválido! Tente novamente.\n");
     }
